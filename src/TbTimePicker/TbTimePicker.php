@@ -36,7 +36,7 @@ class TbTimePicker extends AbstractDateTimePicker
    * @param string $value date and time
    * @return void
    */
-  public function setValue($value)
+  public function setValue($value): void
   {
     if ($value instanceof \DateTime)
       $value = $value->format($this->format);
@@ -74,7 +74,7 @@ class TbTimePicker extends AbstractDateTimePicker
    * @param string $format format
    * @return self
    */
-  public static function register($format = NULL)
+  public static function register($format = NULL): void
   {
     Container::extensionMethod('addTbTimePicker', function($container, $name, $label = NULL, $maxLength = NULL) use ($format)
     {

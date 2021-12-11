@@ -35,7 +35,7 @@ class TbTimePickerExtension extends CompilerExtension
    * @param \Nette\PhpGenerator\ClassType $class class, interface, trait description
    * @return void
    */
-  public function afterCompile(ClassType $class)
+  public function afterCompile(ClassType $class): void
   {
     parent::afterCompile($class);
 
